@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  overflow-x: visible;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "card1 card2 card2 card3"
+    "card4 card5 card6 card3"
+    "card4 card7 card8 card8";
+  grid-template-columns: 271px 284px 284px 280px;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  width: 100%;
+}
+
+/* Left cards fixed */
+.card1 {
+  background-color: #EEE5DE;
+  grid-area: card1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card1 h2 {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  color: #000;
+}
+
+.card1 .highlight {
+  color: #7C4FFD;
+  font-style: italic;
+  font-weight: 500;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.card1 img {
+  width: 150px !important;
+  height: 90px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.card2 {
+  background-color: #7C4FFD;
+  color: white;
+  grid-area: card2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 590px;
+  height: 300px;
+}
+
+.card2 h2 {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 45px;
+  font-weight: 500;
+  color: white;
+}
+
+.card3 {
+  background-color: #E7D3FF;
+  grid-area: card3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  height: 100%; 
+  margin: 0;
+}
+
+.card3 h3 {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 37px;
+  font-weight: 500;
+  margin-top: 20px;
+  color: black;
+} 
+
+.card3 p {
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.card3 .chart-container {
+  width: 100px;
+  height: 255px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card3 .chart-container img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.card4 {
+  background-color: #FACC57;
+  grid-area: card4;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card4 h3 {
+  font-weight: 300;
+  font-size: 37px;
+}
+
+.card4 img {
+  width: 250px !important;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.card5 {
+  display: flex;
+  background-color: #FFFFFF;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.card5 h3 {
+  font-weight: 300;
+  font-size: 27px;
+}
+
+.card5 img {
+  width: 275px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card6 {
+  background-color: #FACC57;
+  grid-area: card6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px 0 20px;
+}
+
+.card6 h3 {
+  font-weight: 300;
+  font-size: 27px;
+}
+
+.card6 img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.card7 {
+  background-color: #FFFFFF;
+  grid-area: card7;
+}
+
+.card7 h1 {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: #000;
+}
+
+.card7 img {
+  width: 165px !important;
+  height: 80px;
+  margin: 10px auto 0;
+}
+
+.card8 {
+  background-color: #7C4FFD;
+  grid-area: card8;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card8-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.card8-img {
+  width: 215px !important;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.card8-text {
+  color: white;
+  font-size: 33px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.button {
+  background-color: #facc57;
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.highlight {
+  color: #7C4FFD;
+  font-weight: bold;
+}
+
+.gold {
+  color: #facc57;
+}
+
+.stars {
+  color: #facc57;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "card2"
+      "card5"
+      "card6"
+      "card3"
+      "card8"
+      "card7"
+      "card1"
+      "card4";
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100% !important;
+    height: auto;
+    min-height: 200px;
+  }
+
+  .card1 img {
+    display: block;
+    margin: 0 auto;
+    width: 180px !important;
+    height: auto;
+  }
+
+  .card3 h3 {
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card3 p {
+    font-size: 18px;
+  }
+
+  .card4 h3 {
+    font-size: 40px;
+  }
+
+  .card4 img {
+    width: 280px !important;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .card5 {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .card5 h3 {
+    font-size: 30px;
+  }
+
+  .card5 img {
+    width: 460px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card6 h3 {
+    font-size: 30px;
+  }
+
+  .card6 img {
+    width: 480px;
+    height: auto;
+  }
+
+  .card7 h1 {
+    font-size: 70px !important;
+  }
+
+  .card7 p {
+    font-size: 20px;
+  }
+
+  .card7 img {
+    display: block;
+    margin: 0 auto;
+    width: 200px !important;
+    height: auto;
+  }
+
+  .card8-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card8-text {
+    font-size: 30px;
+    margin-top: 5px;
+    align-items: left;
+    text-align: left;
+  }
+
+  .card8-img {
+    display: block;
+    margin: 0 auto;
+    width: 230px !important;
+    height: auto;
+  }
+
+  body {
+    padding: 10px;
+  }
+}
